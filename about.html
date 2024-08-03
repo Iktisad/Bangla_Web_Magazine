@@ -5,86 +5,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - B.A.N.G.L.A Magazine</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .banner {
+            background-image: url('https://source.unsplash.com/random/1920x1080?bangladesh');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+        }
+        .banner-overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex: 1 1 calc(33.333% - 20px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
-     <!-- Header -->
-  <header class="bg-white shadow">
-    <div class="container mx-auto flex justify-between items-center p-6">
-      <div class="flex items-center space-x-4">
-        <a href="#"><img src="./public/assets/img/logo.jpg" alt="logo" class="h-12"></a>
-      </div>
-      <h1 class="text-3xl font-bold">B.A.N.G.L.A Magazine</h1>
-      <nav class="flex space-x-6">
-        <a href="#"><img src="./public/assets/svg/facebook.svg" alt="facebook" class="w-7 h-7"></a>
-        <a href="#"><img src="./public/assets/svg/twitter.svg" alt="twitter" class="w-7 h-7"></a>
-        <a href="#"><img src="./public/assets/svg/instagram.svg" alt="instagram" class="w-7 h-7"></a>
-        <a href="#"><img src="./public/assets/svg/youtube.svg" alt="youtube" class="w-7 h-7"></a>
-      </nav>
-    </div>
-  </header>
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto flex justify-between items-center p-6">
+            <div class="flex items-center space-x-4">
+                <a href="#"><img src="./public/assets/img/logo.jpg" alt="logo" class="h-12" aria-label="Logo"></a>
+            </div>
+            <h1 class="text-3xl font-bold">B.A.N.G.L.A Magazine</h1>
+            <nav class="flex space-x-6">
+                <a href="#" aria-label="Facebook"><img src="./public/assets/svg/facebook.svg" alt="Facebook" class="w-7 h-7"></a>
+                <a href="#" aria-label="Twitter"><img src="./public/assets/svg/twitter.svg" alt="Twitter" class="w-7 h-7"></a>
+                <a href="#" aria-label="Instagram"><img src="./public/assets/svg/instagram.svg" alt="Instagram" class="w-7 h-7"></a>
+                <a href="#" aria-label="YouTube"><img src="./public/assets/svg/youtube.svg" alt="YouTube" class="w-7 h-7"></a>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Navigation Bar -->
-  <nav class="bg-gray-700 shadow">
-    <div class="container mx-auto flex justify-center p-4 space-x-6">
-      <a href="./index.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
-        <img src="./public/assets/svg/home.svg" class="w-6 h-6" alt=""> <span class="px-2">Home</span></a>
-      <a href="./about.html" class="text-green-500 hover:text-green-600 font-bold flex items-center">
-        <img src="./public/assets/svg/about.svg" class="w-6 h-6" alt=""> <span class="px-2">About Us | Contact</span> </a>
-      <a href="./contribute.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
-        <img src="./public/assets/svg/contribute.svg" class="w-6 h-6" alt=""> <span class="px-2">How To Get Involved?</span></a>
-    </div>
-  </nav>
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-700 shadow">
+        <div class="container mx-auto flex justify-center p-4 space-x-6">
+            <a href="./index.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
+                <img src="./public/assets/svg/home.svg" class="w-6 h-6" alt="Home Icon">
+                <span class="px-2">Home</span>
+            </a>
+            <a href="./about.html" class="text-green-500 hover:text-green-600 font-bold flex items-center">
+                <img src="./public/assets/svg/about.svg" class="w-6 h-6" alt="About Us Icon">
+                <span class="px-2">About Us | Contact</span>
+            </a>
+            <a href="./contribute.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
+                <img src="./public/assets/svg/contribute.svg" class="w-6 h-6" alt="Contribute Icon">
+                <span class="px-2">How To Get Involved?</span>
+            </a>
+        </div>
+    </nav>
 
     <main class="container mx-auto p-6 flex-grow">
-        <section class="mb-8">
-            <h2 class="text-3xl font-bold mb-4">Mission and Objectives</h2>
-            <p class="mb-4">Our mission is to celebrate and sustain Bengali language and culture globally, fostering connections among the diaspora and promoting cultural exchanges.</p>
-            <ul class="list-disc list-inside">
-                <li>To encourage and sustain Bengali language classes and other educative efforts for language enthusiasts and the diaspora</li>
-                <li>To promote Bengali as a language of ideation, inquiry, and self-expression</li>
-                <li>To celebrate the lived experiences of Bengalis in international and global spaces</li>
-            </ul>
-        </section>
-
-        <section class="mb-8">
-            <h2 class="text-3xl font-bold mb-4">Activities and Goals</h2>
-            <div class="mb-6">
-                <h3 class="text-2xl font-semibold mb-2">Bengali Language Classes and Education</h3>
-                <p>We provide spaces for learning Bengali language that bring the diasporic milieu and other linguistic enthusiasts together, sustaining its everyday forms as a medium of expressing the mundane as well as the imaginative.</p>
-            </div>
-            <div class="mb-6">
-                <h3 class="text-2xl font-semibold mb-2">Cultural Exchanges and Interactions</h3>
-                <p>Using Bengali as a medium of instruction to teach foreign languages and to interact with other languages through literary-cultural translations, we promote symbiotic coexistence of different diasporic identities.</p>
-            </div>
-            <div class="mb-6">
-                <h3 class="text-2xl font-semibold mb-2">Celebration of Bengali Cultural Experiences Globally</h3>
-                <p>We acknowledge the existence of Bengalis both outside and inside their territorial borderlands, situating ourselves in the global distribution of Bengalis as a linguo-cultural group.</p>
+        <!-- Mission and Objectives Banner -->
+        <section class="banner mb-8 h-64 flex items-center justify-center relative">
+            <div class="banner-overlay"></div>
+            <div class="z-10 text-center">
+                <h2 class="text-4xl font-bold mb-4">Who We Are?</h2>
+                <p class="text-xl max-w-3xl mx-auto">Our mission is to celebrate and sustain Bengali language and culture globally, fostering connections among the diaspora and promoting cultural exchanges. We aim to provide spaces for learning, cultural exchanges, and celebrations that acknowledge and promote the diverse experiences of Bengalis worldwide.</p>
             </div>
         </section>
 
+        <!-- Activities and Goals -->
         <section class="mb-8">
-            <h2 class="text-3xl font-bold mb-4">Contact Information</h2>
-            <p>Address: 306-4870 Avenue Bourret, Montreal, Quebec, Canada</p>
-            <p>Email: info@bangaliabhibasi.org</p>
+            <h2 class="text-3xl font-bold mb-4">What We Do?</h2>
+            <div class="flex flex-wrap justify-between space-x-4">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-2">Bengali Language Classes and Education</h3>
+                    <p>We provide spaces for learning Bengali language that bring the diasporic milieu and other linguistic enthusiasts together, sustaining its everyday forms as a medium of expressing the mundane as well as the imaginative.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-2">Cultural Exchanges and Interactions</h3>
+                    <p>Using Bengali as a medium of instruction to teach foreign languages and to interact with other languages through literary-cultural translations, we promote symbiotic coexistence of different diasporic identities.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-2">Celebration of Bengali Cultural Experiences Globally</h3>
+                    <p>We acknowledge the existence of Bengalis both outside and inside their territorial borderlands, situating ourselves in the global distribution of Bengalis as a linguo-cultural group.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet Our Team -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold mb-4">Meet Our Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <img src="https://source.unsplash.com/random/300x300?person" alt="Team Member" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="text-2xl font-semibold mt-4">John Doe</h3>
+                    <p class="text-gray-600">Editor-in-Chief</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <img src="https://source.unsplash.com/random/300x300?woman" alt="Team Member" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="text-2xl font-semibold mt-4">Jane Smith</h3>
+                    <p class="text-gray-600">Managing Editor</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <img src="https://source.unsplash.com/random/300x300?man" alt="Team Member" class="w-full h-48 object-cover rounded-t-lg">
+                    <h3 class="text-2xl font-semibold mt-4">Michael Brown</h3>
+                    <p class="text-gray-600">Creative Director</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Follow Us or Contact Us -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold mb-4">Follow Us or Contact Us</h2>
+            <p>For more information, feel free to contact us at <a href="mailto:info@bangaliabhibasi.org" class="text-blue-600 hover:underline">info@bangaliabhibasi.org</a>.</p>
             <div class="mt-4">
-                <a href="#" class="text-blue-600 hover:underline">Facebook</a> | 
-                <a href="#" class="text-blue-600 hover:underline">Twitter</a> | 
-                <a href="#" class="text-blue-600 hover:underline">Instagram</a>
+                <a href="#" class="text-blue-600 hover:underline" aria-label="Facebook">Facebook</a> | 
+                <a href="#" class="text-blue-600 hover:underline" aria-label="Twitter">Twitter</a> | 
+                <a href="#" class="text-blue-600 hover:underline" aria-label="Instagram">Instagram</a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-6 mt-12">
-    <div class="container mx-auto text-center space-y-4">
-      <div class="space-x-6">
-        <a href="#" class="hover:underline">Terms and Conditions of Use</a>
-        <a href="#" class="hover:underline">Registration Details</a>
-        <a href="./cookie.html" class="hover:underline">Cookie Management</a>
-        <a href="#" class="hover:underline">Contact Us</a>
-      </div>
-      <p>&copy; 2024 Bangla Magazine. All rights reserved.</p>
-    </div>
-  </footer>
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto text-center space-y-4">
+            <div class="space-x-6">
+                <a href="#" class="hover:underline">Terms and Conditions of Use</a>
+                <a href="#" class="hover:underline">Registration Details</a>
+                <a href="./cookie.html" class="hover:underline">Cookie Management</a>
+                <a href="#" class="hover:underline">Contact Us</a>
+            </div>
+            <p>&copy; 2024 Bangla Magazine. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
