@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookie Management Policy</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+    <!-- Header -->
     <header class="bg-white shadow">
-        <div class="container mx-auto flex justify-between items-center p-6">
-            <div class="flex items-center space-x-4">
-                <a href="#"><img src="./public/assets/img/logo.jpg" alt="logo" class="h-12"></a>
+        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center p-4 sm:p-6">
+            <div class="flex items-center space-x-4 mb-4 sm:mb-0">
+                <a href="#" class="hidden sm:block"><img src="./public/assets/img/logo.jpg" alt="logo" class="h-12"></a>
             </div>
-            <h1 class="text-3xl font-bold">Bangla Magazine</h1>
-            <nav class="flex space-x-6">
-                <a href="#"><img src="./public/assets/svg/facebook.svg" alt="facebook" class="w-7 h-7"></a>
-                <a href="#"><img src="./public/assets/svg/twitter.svg" alt="twitter" class="w-7 h-7"></a>
-                <a href="#"><img src="./public/assets/svg/instagram.svg" alt="instagram" class="w-7 h-7"></a>
-                <a href="#"><img src="./public/assets/svg/youtube.svg" alt="youtube" class="w-7 h-7"></a>
+            <h1 class="text-2xl sm:text-3xl font-bold text-center sm:text-left">B.A.N.G.L.A Magazine</h1>
+            <nav class="flex space-x-4 sm:space-x-6 mt-4 sm:mt-0">
+                <a href="#"><img src="./public/assets/svg/facebook.svg" alt="facebook"
+                        class="w-6 sm:w-7 h-6 sm:h-7"></a>
+                <a href="#"><img src="./public/assets/svg/twitter.svg" alt="twitter" class="w-6 sm:w-7 h-6 sm:h-7"></a>
+                <a href="#"><img src="./public/assets/svg/instagram.svg" alt="instagram"
+                        class="w-6 sm:w-7 h-6 sm:h-7"></a>
+                <a href="#"><img src="./public/assets/svg/youtube.svg" alt="youtube" class="w-6 sm:w-7 h-6 sm:h-7"></a>
             </nav>
         </div>
     </header>
 
     <!-- Navigation Bar -->
     <nav class="bg-gray-700 shadow-lg">
-        <div class="container mx-auto flex justify-center p-4 space-x-6">
-            <a href="./index.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
-                <img src="./public/assets/svg/home.svg" class="w-6 h-6" alt="">
-                <span class="px-2">Home</span>
-            </a>
-            <a href="./about.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
-                <img src="./public/assets/svg/about.svg" class="w-6 h-6" alt="">
-                <span class="px-2">About Us | Contact</span>
-            </a>
-            <a href="./contribute.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
-                <img src="./public/assets/svg/contribute.svg" class="w-6 h-6" alt="">
-                <span class="px-2">How To Get Involved?</span>
-            </a>
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="sm:hidden flex items-center text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+
+            <!-- Navigation Links -->
+            <div id="menu"
+                class="hidden sm:flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="./index.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
+                    <img src="./public/assets/svg/home.svg" class="w-5 sm:w-6 h-5 sm:h-6" alt="">
+                    <span class="ml-2">Home</span>
+                </a>
+                <a href="./about.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
+                    <img src="./public/assets/svg/about.svg" class="w-5 sm:w-6 h-5 sm:h-6" alt="">
+                    <span class="ml-2">About Us | Contact</span>
+                </a>
+                <a href="./contribute.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
+                    <img src="./public/assets/svg/contribute.svg" class="w-5 sm:w-6 h-5 sm:h-6" alt="">
+                    <span class="ml-2">How To Get Involved?</span>
+                </a>
+            </div>
         </div>
     </nav>
     <div class="container mx-auto px-4 py-8">
@@ -45,39 +63,55 @@
             <p class="text-gray-600 mb-6"><strong>Effective Date:</strong> [Insert Date]</p>
 
             <h2 class="text-2xl font-semibold mb-4">1. Introduction</h2>
-            <p class="mb-4">This Cookie Management Policy outlines the use of cookies on our magazine website. We are committed to protecting your privacy and ensuring transparency in how we use cookies. This policy explains what cookies are, how we use them, and your choices regarding cookies.</p>
+            <p class="mb-4">This Cookie Management Policy outlines the use of cookies on our magazine website. We are
+                committed to protecting your privacy and ensuring transparency in how we use cookies. This policy
+                explains what cookies are, how we use them, and your choices regarding cookies.</p>
 
             <h2 class="text-2xl font-semibold mb-4">2. What are Cookies?</h2>
-            <p class="mb-4">Cookies are small text files stored on your device (computer, smartphone, tablet) when you visit a website. They are used to make websites work more efficiently, provide better user experiences, and collect information about how the website is being used.</p>
+            <p class="mb-4">Cookies are small text files stored on your device (computer, smartphone, tablet) when you
+                visit a website. They are used to make websites work more efficiently, provide better user experiences,
+                and collect information about how the website is being used.</p>
 
             <h2 class="text-2xl font-semibold mb-4">3. Types of Cookies We Use</h2>
-            <p class="mb-4">Our website uses only essential cookies necessary for the operation of the website. These include:</p>
+            <p class="mb-4">Our website uses only essential cookies necessary for the operation of the website. These
+                include:</p>
             <ul class="list-disc list-inside mb-4">
-                <li><strong>JWT Authentication Cookies:</strong> We use JSON Web Tokens (JWT) to authenticate users. These tokens are stored as cookies on your device and are essential for maintaining secure access to your account and personalized content.</li>
+                <li><strong>JWT Authentication Cookies:</strong> We use JSON Web Tokens (JWT) to authenticate users.
+                    These tokens are stored as cookies on your device and are essential for maintaining secure access to
+                    your account and personalized content.</li>
             </ul>
 
             <h2 class="text-2xl font-semibold mb-4">4. How We Use Cookies</h2>
             <p class="mb-4">We use JWT authentication cookies for the following purposes:</p>
             <ul class="list-disc list-inside mb-4">
-                <li><strong>Authentication:</strong> To recognize you when you log in to our website and to maintain your session.</li>
-                <li><strong>Security:</strong> To ensure the security of our website and protect your data from unauthorized access.</li>
+                <li><strong>Authentication:</strong> To recognize you when you log in to our website and to maintain
+                    your session.</li>
+                <li><strong>Security:</strong> To ensure the security of our website and protect your data from
+                    unauthorized access.</li>
                 <li><strong>Preferences:</strong> To remember your preferences and settings.</li>
             </ul>
 
             <h2 class="text-2xl font-semibold mb-4">5. Managing Cookies</h2>
             <p class="mb-4">You have control over the cookies stored on your device. Here’s how you can manage them:</p>
             <ul class="list-disc list-inside mb-4">
-                <li><strong>Browser Settings:</strong> Most web browsers allow you to control cookies through their settings. You can set your browser to refuse cookies or delete cookies that have already been set. Please note that disabling essential cookies may affect the functionality of our website.</li>
+                <li><strong>Browser Settings:</strong> Most web browsers allow you to control cookies through their
+                    settings. You can set your browser to refuse cookies or delete cookies that have already been set.
+                    Please note that disabling essential cookies may affect the functionality of our website.</li>
             </ul>
 
             <h2 class="text-2xl font-semibold mb-4">6. Your Consent</h2>
-            <p class="mb-4">By using our website, you consent to the use of essential cookies as described in this policy. If you do not agree to our use of cookies, you should adjust your browser settings accordingly or refrain from using our website.</p>
+            <p class="mb-4">By using our website, you consent to the use of essential cookies as described in this
+                policy. If you do not agree to our use of cookies, you should adjust your browser settings accordingly
+                or refrain from using our website.</p>
 
             <h2 class="text-2xl font-semibold mb-4">7. Changes to This Policy</h2>
-            <p class="mb-4">We may update this Cookie Management Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any significant changes by posting the new policy on our website and updating the effective date.</p>
+            <p class="mb-4">We may update this Cookie Management Policy from time to time to reflect changes in our
+                practices or for other operational, legal, or regulatory reasons. We will notify you of any significant
+                changes by posting the new policy on our website and updating the effective date.</p>
 
             <h2 class="text-2xl font-semibold mb-4">8. Contact Us</h2>
-            <p class="mb-4">If you have any questions or concerns about this Cookie Management Policy, please contact us at:</p>
+            <p class="mb-4">If you have any questions or concerns about this Cookie Management Policy, please contact us
+                at:</p>
             <p class="text-gray-600">[Insert Contact Information]</p>
         </div>
     </div>
@@ -93,7 +127,14 @@
             <p>&copy; 2024 Bangla Magazine. All rights reserved.</p>
         </div>
     </footer>
-    
+
 </body>
+<script>
+    // JavaScript for toggling the mobile menu
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('hidden');
+    });
+</script>
 
 </html>

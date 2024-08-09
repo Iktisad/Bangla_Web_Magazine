@@ -7,37 +7,52 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
-    <!-- Header -->
-    <header class="bg-white shadow">
-        <div class="container mx-auto flex justify-between items-center p-6">
-            <div class="flex items-center space-x-4">
-                <a href="#"><img src="./public/assets/img/logo.jpg" alt="logo" class="h-12" aria-label="Logo"></a>
+     <!-- Header -->
+     <header class="bg-white shadow">
+        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center p-4 sm:p-6">
+            <div class="flex items-center space-x-4 mb-4 sm:mb-0">
+                <a href="#" class="hidden sm:block"><img src="./public/assets/img/logo.jpg" alt="logo" class="h-12"></a>
             </div>
-            <h1 class="text-3xl font-bold">B.A.N.G.L.A Magazine</h1>
-            <nav class="flex space-x-6">
-                <a href="#" aria-label="Facebook"><img src="./public/assets/svg/facebook.svg" alt="Facebook" class="w-7 h-7"></a>
-                <a href="#" aria-label="Twitter"><img src="./public/assets/svg/twitter.svg" alt="Twitter" class="w-7 h-7"></a>
-                <a href="#" aria-label="Instagram"><img src="./public/assets/svg/instagram.svg" alt="Instagram" class="w-7 h-7"></a>
-                <a href="#" aria-label="YouTube"><img src="./public/assets/svg/youtube.svg" alt="YouTube" class="w-7 h-7"></a>
+            <h1 class="text-2xl sm:text-3xl font-bold text-center sm:text-left">B.A.N.G.L.A Magazine</h1>
+            <nav class="flex space-x-4 sm:space-x-6 mt-4 sm:mt-0">
+                <a href="#"><img src="./public/assets/svg/facebook.svg" alt="facebook"
+                        class="w-6 sm:w-7 h-6 sm:h-7"></a>
+                <a href="#"><img src="./public/assets/svg/twitter.svg" alt="twitter" class="w-6 sm:w-7 h-6 sm:h-7"></a>
+                <a href="#"><img src="./public/assets/svg/instagram.svg" alt="instagram"
+                        class="w-6 sm:w-7 h-6 sm:h-7"></a>
+                <a href="#"><img src="./public/assets/svg/youtube.svg" alt="youtube" class="w-6 sm:w-7 h-6 sm:h-7"></a>
             </nav>
         </div>
     </header>
 
     <!-- Navigation Bar -->
-    <nav class="bg-gray-700 shadow">
-        <div class="container mx-auto flex justify-center p-4 space-x-6">
-            <a href="./index.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
-                <img src="./public/assets/svg/home.svg" class="w-6 h-6" alt="Home Icon">
-                <span class="px-2">Home</span>
-            </a>
-            <a href="./about.html" class="text-green-500 hover:text-green-600 font-bold flex items-center">
-                <img src="./public/assets/svg/about.svg" class="w-6 h-6" alt="About Us Icon">
-                <span class="px-2">About Us | Contact</span>
-            </a>
-            <a href="./contribute.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
-                <img src="./public/assets/svg/contribute.svg" class="w-6 h-6" alt="Contribute Icon">
-                <span class="px-2">How To Get Involved?</span>
-            </a>
+    <nav class="bg-gray-700 shadow-lg">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="sm:hidden flex items-center text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+
+            <!-- Navigation Links -->
+            <div id="menu"
+                class="hidden sm:flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="./index.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
+                    <img src="./public/assets/svg/home.svg" class="w-5 sm:w-6 h-5 sm:h-6" alt="">
+                    <span class="ml-2">Home</span>
+                </a>
+                <a href="./about.html" class="text-green-500 hover:text-green-600 font-bold flex items-center">
+                    <img src="./public/assets/svg/about.svg" class="w-5 sm:w-6 h-5 sm:h-6" alt="">
+                    <span class="ml-2">About Us | Contact</span>
+                </a>
+                <a href="./contribute.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
+                    <img src="./public/assets/svg/contribute.svg" class="w-5 sm:w-6 h-5 sm:h-6" alt="">
+                    <span class="ml-2">How To Get Involved?</span>
+                </a>
+            </div>
         </div>
     </nav>
 
@@ -138,4 +153,12 @@
         </div>
     </footer>
 </body>
+<script>
+    // JavaScript for toggling the mobile menu
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
 </html>
