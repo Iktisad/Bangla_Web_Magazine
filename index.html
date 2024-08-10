@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>B.A.N.G.L.A Magazine</title>
-  <link href="./tailwindcss/output.css" rel="stylesheet">
+  <link href="./src/tailwindcss/output.css" rel="stylesheet">
   <style>
     .background-image {
-      background-image: url('../public/assets/img/culture.jpg');
+      background-image: url('./public/assets/img/culture.jpg');
       background-size: cover;
       background-attachment: fixed;
       background-position: center;
@@ -73,13 +73,13 @@
   <!-- Header -->
   <header class="bg-white shadow">
     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center p-4 md:p-6">
-      <a href="#" class="hidden md:block"><img src="../public/assets/img/logo.jpg" alt="logo" class="h-12"></a>
+      <a href="#" class="hidden md:block"><img src="./public/assets/img/logo.jpg" alt="logo" class="h-12"></a>
       <h1 class="text-2xl md:text-3xl font-bold text-center md:text-left">B.A.N.G.L.A Magazine</h1>
       <nav class="flex space-x-4 md:space-x-6 mt-4 md:mt-0">
-        <a href="#"><img src="../public/assets/svg/facebook.svg" alt="facebook" class="w-6 md:w-7 h-6 md:h-7"></a>
-        <a href="#"><img src="../public/assets/svg/twitter.svg" alt="twitter" class="w-6 md:w-7 h-6 md:h-7"></a>
-        <a href="#"><img src="../public/assets/svg/instagram.svg" alt="instagram" class="w-6 md:w-7 h-6 md:h-7"></a>
-        <a href="#"><img src="../public/assets/svg/youtube.svg" alt="youtube" class="w-6 md:w-7 h-6 md:h-7"></a>
+        <a href="#"><img src="./public/assets/svg/facebook.svg" alt="facebook" class="w-6 md:w-7 h-6 md:h-7"></a>
+        <a href="#"><img src="./public/assets/svg/twitter.svg" alt="twitter" class="w-6 md:w-7 h-6 md:h-7"></a>
+        <a href="#"><img src="./public/assets/svg/instagram.svg" alt="instagram" class="w-6 md:w-7 h-6 md:h-7"></a>
+        <a href="#"><img src="./public/assets/svg/youtube.svg" alt="youtube" class="w-6 md:w-7 h-6 md:h-7"></a>
       </nav>
     </div>
   </header>
@@ -97,15 +97,15 @@
       <!-- Navigation Links -->
       <div id="menu" class="hidden space-y-2 md:space-y-0 md:flex md:flex-row md:space-x-6 md:w-full md:justify-center">
         <a href="./index.html" class="text-green-500 hover:text-green-600 font-bold flex items-center">
-          <img src="../public/assets/svg/home.svg" class="w-5 md:w-6 h-5 md:h-6" alt="">
+          <img src="./public/assets/svg/home.svg" class="w-5 md:w-6 h-5 md:h-6" alt="">
           <span class="ml-2">Home</span>
         </a>
-        <a href="./about.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
-          <img src="../public/assets/svg/about.svg" class="w-5 md:w-6 h-5 md:h-6" alt="">
+        <a href="./src/about.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
+          <img src="./public/assets/svg/about.svg" class="w-5 md:w-6 h-5 md:h-6" alt="">
           <span class="ml-2">About Us</span>
         </a>
-        <a href="./contribute.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
-          <img src="../public/assets/svg/contribute.svg" class="w-5 md:w-6 h-5 md:h-6" alt="">
+        <a href="./src/contribute.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
+          <img src="./public/assets/svg/contribute.svg" class="w-5 md:w-6 h-5 md:h-6" alt="">
           <span class="ml-2">How To Get Involved?</span>
         </a>
       </div>
@@ -117,7 +117,7 @@
     <div class="relative flex flex-col mb-8 rounded-lg shadow-lg md:flex-row">
       <!-- Left Section with Welcome Note -->
       <div class="relative w-full md:w-2/5 h-auto">
-        <img src="../public/assets/img/culture.jpg" alt="Background"
+        <img src="./public/assets/img/culture.jpg" alt="Background"
           class="absolute inset-0 w-full h-full object-cover opacity-30">
         <div class="absolute inset-0 bg-white bg-opacity-60"></div>
         <div class="relative p-4 sm:p-8 founding-note flex flex-col justify-start">
@@ -145,28 +145,28 @@
           <ul class="list-none mb-4 text-base md:text-lg space-y-2">
             <li class="flex-col">
               <span class="flex items-center">
-                <img src="../public/assets/svg/article.svg" class="w-5 md:w-7 h-5 md:h-7" alt="article">
+                <img src="./public/assets/svg/article.svg" class="w-5 md:w-7 h-5 md:h-7" alt="article">
                 <span class="pl-4 text-lg font-semibold md:text-xl">Articles:</span> 
               </span>
               <p class="pl-10 font-medium text-base font-sans">Insights on our annual theme, Bengali culture, and diaspora experiences.</p>
             </li>
             <li class="flex flex-col">
               <span class="flex items-center">
-                <img src="../public/assets/svg/literary.svg" class="w-5 md:w-7 h-5 md:h-7" alt="literary">
+                <img src="./public/assets/svg/literary.svg" class="w-5 md:w-7 h-5 md:h-7" alt="literary">
                 <span class="pl-4 text-lg font-semibold md:text-xl">Literary Works:</span>
               </span>  
               <p class="pl-10 font-medium text-base font-sans">Original poetry, short stories, and captivating fiction.</p>
             </li>
             <li class="flex flex-col">
               <span class="flex items-center">
-                <img src="../public/assets/svg/photography.svg" class="w-5 md:w-7 h-5 md:h-7" alt="photography">
+                <img src="./public/assets/svg/photography.svg" class="w-5 md:w-7 h-5 md:h-7" alt="photography">
                   <span class="pl-4 text-lg font-semibold md:text-xl">Art and Photography:</span> 
                 </span>
                 <p class="pl-10 font-medium text-base font-sans"> Visual art and photography that tell powerful stories.</p>
             </li>
             <li class="flex flex-col pb-4 border-b border-gray-400">
                 <span class="flex items-center">
-                  <img src="../public/assets/svg/narratives.svg"
+                  <img src="./public/assets/svg/narratives.svg"
                     class="w-5 md:w-7 h-5 md:h-7" alt="narratives">
                     <span class="pl-4 text-lg font-semibold md:text-xl">Personal Narratives:</span>
                 </span>
@@ -198,7 +198,7 @@
       <div class="space-x-4 sm:space-x-6">
         <a href="#" class="hover:underline">Terms and Conditions of Use</a>
         <a href="#" class="hover:underline">Registration Details</a>
-        <a href="./cookie.html" class="hover:underline">Cookie Management</a>
+        <a href="./src/cookie.html" class="hover:underline">Cookie Management</a>
         <a href="#" class="hover:underline">Contact Us</a>
       </div>
       <p>&copy; 2024 Bangla Magazine. All rights reserved.</p>
