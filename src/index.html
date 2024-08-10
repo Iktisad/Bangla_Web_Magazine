@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B.A.N.G.L.A Magazine</title>
+  <link href="./tailwindcss/output.css" rel="stylesheet">
+  <style>
+    .background-image {
+      background-image: url('../public/assets/img/culture.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      opacity: 0.05;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .founding-note {
+      font-family: 'Georgia', serif;
+      color: #1a202c;
+    }
+
+    .fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    body {
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex-grow: 1;
+    }
+
+    body::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+      background: transparent;
+      /* Hides the scrollbar in Webkit browsers */
+    }
+
+    /* Hide scrollbar for Edge and Internet Explorer */
+    @supports (-ms-overflow-style: none) {
+      body {
+        -ms-overflow-style: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center p-4 md:p-6">
+      <a href="#" class="hidden md:block"><img src="../public/assets/img/logo.jpg" alt="logo" class="h-12"></a>
+      <h1 class="text-2xl md:text-3xl font-bold text-center md:text-left">B.A.N.G.L.A Magazine</h1>
+      <nav class="flex space-x-4 md:space-x-6 mt-4 md:mt-0">
+        <a href="#"><img src="../public/assets/svg/facebook.svg" alt="facebook" class="w-6 md:w-7 h-6 md:h-7"></a>
+        <a href="#"><img src="../public/assets/svg/twitter.svg" alt="twitter" class="w-6 md:w-7 h-6 md:h-7"></a>
+        <a href="#"><img src="../public/assets/svg/instagram.svg" alt="instagram" class="w-6 md:w-7 h-6 md:h-7"></a>
+        <a href="#"><img src="../public/assets/svg/youtube.svg" alt="youtube" class="w-6 md:w-7 h-6 md:h-7"></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="bg-gray-700 shadow-lg">
+    <div class="container mx-auto p-4 flex justify-between md:justify-around lg:justify-around">
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" class="md:hidden flex text-white focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <!-- Navigation Links -->
+      <div id="menu" class="hidden space-y-2 md:space-y-0 md:flex md:flex-row md:space-x-6 md:w-full md:justify-center">
+        <a href="./index.html" class="text-green-500 hover:text-green-600 font-bold flex items-center">
+          <img src="../public/assets/svg/home.svg" class="w-5 md:w-6 h-5 md:h-6" alt="">
+          <span class="ml-2">Home</span>
+        </a>
+        <a href="./about.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
+          <img src="../public/assets/svg/about.svg" class="w-5 md:w-6 h-5 md:h-6" alt="">
+          <span class="ml-2">About Us</span>
+        </a>
+        <a href="./contribute.html" class="text-gray-200 hover:text-green-600 font-semibold flex items-center">
+          <img src="../public/assets/svg/contribute.svg" class="w-5 md:w-6 h-5 md:h-6" alt="">
+          <span class="ml-2">How To Get Involved?</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="md:container overflow-hidden md:mx-auto  p-4 md:p-6">
+    <div class="relative flex flex-col mb-8 rounded-lg shadow-lg md:flex-row">
+      <!-- Left Section with Welcome Note -->
+      <div class="relative w-full md:w-2/5 h-auto">
+        <img src="../public/assets/img/culture.jpg" alt="Background"
+          class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-white bg-opacity-60"></div>
+        <div class="relative p-4 sm:p-8 founding-note flex flex-col justify-start">
+          <h2 class="text-xl md:text-2xl font-bold mb-2 sm:mb-4 text-gray-600">Welcome to Bangla Abhibashi Network, a
+            Glocal Linguo-cultural Association</h2>
+          <blockquote class="fade-in">
+            <svg class="w-6 sm:w-8 h-6 sm:h-8 pr-2 text-gray-500 mb-2 sm:mb-4" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+              <path
+                d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
+            </svg>
+            <p class="text-sm md:text-lg pl-1 sm:pl-2 mb-2 sm:mb-4 font-semibold text-gray-500">We are a Montreal-based Bangali
+              diaspora committed to connecting Bengalis worldwide and promoting our rich cultural heritage.</p>
+            <p class="text-lg md:text-2xl font-semibold text-gray-500">"Bridging Distances, Celebrating Culture"</p>
+          </blockquote>
+        </div>
+      </div>
+      <!-- Right Section with Call for Contributions -->
+      <div class="w-full md:w-3/5 bg-white border-l-2 border-gray-300 flex flex-col p-4 sm:p-8">
+        
+        <div class="text-gray-600">
+          <h2 class="text-2xl underline md:text-4xl font-bold mb-2 md:mb-4 text-teal-600">Call for Contributions</h2>
+          <p class="mb-4 text-base md:text-xl font-medium">Share your creativity and join us in celebrating Bengali
+            culture! We welcome:</p>
+          <ul class="list-none mb-4 text-base md:text-lg space-y-2">
+            <li class="flex-col">
+              <span class="flex items-center">
+                <img src="../public/assets/svg/article.svg" class="w-5 md:w-7 h-5 md:h-7" alt="article">
+                <span class="pl-4 text-lg font-semibold md:text-xl">Articles:</span> 
+              </span>
+              <p class="pl-10 font-medium text-base font-sans">Insights on our annual theme, Bengali culture, and diaspora experiences.</p>
+            </li>
+            <li class="flex flex-col">
+              <span class="flex items-center">
+                <img src="../public/assets/svg/literary.svg" class="w-5 md:w-7 h-5 md:h-7" alt="literary">
+                <span class="pl-4 text-lg font-semibold md:text-xl">Literary Works:</span>
+              </span>  
+              <p class="pl-10 font-medium text-base font-sans">Original poetry, short stories, and captivating fiction.</p>
+            </li>
+            <li class="flex flex-col">
+              <span class="flex items-center">
+                <img src="../public/assets/svg/photography.svg" class="w-5 md:w-7 h-5 md:h-7" alt="photography">
+                  <span class="pl-4 text-lg font-semibold md:text-xl">Art and Photography:</span> 
+                </span>
+                <p class="pl-10 font-medium text-base font-sans"> Visual art and photography that tell powerful stories.</p>
+            </li>
+            <li class="flex flex-col pb-4 border-b border-gray-400">
+                <span class="flex items-center">
+                  <img src="../public/assets/svg/narratives.svg"
+                    class="w-5 md:w-7 h-5 md:h-7" alt="narratives">
+                    <span class="pl-4 text-lg font-semibold md:text-xl">Personal Narratives:</span>
+                </span>
+
+                <p class="pl-10 font-medium text-base font-sans">Travel writing, memoirs, and interviews with cultural icons.</p>
+            </li>
+            <li class="block py-2 px-2 border-l-4 border-gray-600">
+              <p>
+                <i>For any queries email us at</i><a href="mailto:info@bangaliabhibasi.org" class="ml-1 font-semibold">
+                  info@bangaliabhibasi.org</a>
+              </p>
+            </li>
+          </ul>
+          <div class="flex md:justify-end">
+            <a href="./contribute.html"
+              class="px-4 sm:px-6 py-2 sm:py-3 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-600 transition duration-300">Submit
+              your work here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 mt-12">
+    <div class="container mx-auto text-center space-y-4">
+      <div class="space-x-4 sm:space-x-6">
+        <a href="#" class="hover:underline">Terms and Conditions of Use</a>
+        <a href="#" class="hover:underline">Registration Details</a>
+        <a href="./cookie.html" class="hover:underline">Cookie Management</a>
+        <a href="#" class="hover:underline">Contact Us</a>
+      </div>
+      <p>&copy; 2024 Bangla Magazine. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // JavaScript for toggling the mobile menu
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+
+</html>
